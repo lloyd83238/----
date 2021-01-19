@@ -1,0 +1,157 @@
+@import url('./css/reset.css');
+
+body{
+padding-top:  80px;
+background-color: gainsboro;
+}
+
+.wrapper{
+    width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 50px;
+    display: flex;
+    // outline: 2px solid cadetblue;
+    
+
+
+
+.left{
+    flex-direction: column;
+    padding: 20px;
+    img{
+        width: 214px;
+        padding-top: 50px;
+        padding-left:10px;
+    }
+}
+
+
+
+.right{
+    // outline: 2px solid cadetblue;
+   padding: 20px;
+   p{
+        margin-bottom: 20px;
+   }
+    .fa-star{
+        color: gold;
+    }
+    .star{
+        margin-bottom: 20px;
+    }
+
+    .value{
+        display: flex;
+        align-items: center;
+        height: 20px;
+        margin-top: 20px;
+        font-size: 24px;
+    }
+
+    .version{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 90px;
+    height: 24px;
+        p{
+       font-size: 20px; 
+       margin-right: 20px;
+       height: 24px;
+         }
+
+        button{
+        height: 24px;
+        width: auto;
+        margin-right: 10px;
+        
+        }
+    }
+
+
+    .icon{
+    width: auto;
+    display: flex;
+    margin-bottom: 20px;
+    // outline: 2px solid cadetblue;
+    .cart{
+        margin-right: 30px;
+        width: 200px;
+        height: 50px;
+        background-color: pink;
+        border: 1px solid red;
+        color: red;
+        outline:none;
+    }
+
+    .cart:hover{
+        border: 1px solid red;
+        background-color: rgb(240, 157, 171);
+    }
+    .buy{
+        width: 200px;
+        height: 50px;
+        background-color:rgb(201, 39, 39);
+        border: 1px solid rgb(201, 39, 39);
+        color: white;
+        outline:none;
+    }
+
+    .buy:hover{
+        background-color: maroon;
+        border: 1px solid ;
+    }
+    }
+
+
+
+}
+}
+
+.wrapper_down{
+    width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    
+    display: flex;
+    // outline: 2px solid cadetblue;
+    margin-bottom: 80px;
+    .leftimg{
+        padding: 20px;
+    }
+
+    .value{
+        margin-left: 120px;
+        h3{
+            margin-bottom: 80px;
+        }
+        .valueoutput{
+            text-align: center;
+            // outline: 2px solid cadetblue;
+        }
+    }
+    .number{
+        margin-left: 120px;
+        h3{
+            margin-bottom: 80px;
+            
+        }
+
+        .numberoutput{
+            text-align: center;
+// outline: 2px solid black;
+        }
+    }
+    .sum{
+        margin-left: 120px;
+        h3{
+            margin-bottom: 80px;
+        }
+        .sumoutput{
+            text-align: center;
+        }
+    }
+}
+
+

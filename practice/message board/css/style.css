@@ -1,0 +1,99 @@
+@import url('reset.css');
+
+body{
+
+}
+
+.wrapper{
+    width:800px;
+    margin: 0 auto;
+}
+
+.message{
+    background-color: rgb(205, 247, 238);
+    height: 200px;
+    width: 800px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    margin: 0 auto;
+}
+
+.message h1{
+    width: 780px;
+}
+
+
+#mesboard{
+    display: block;
+    margin: 0 auto; 
+
+}
+
+.sendout{
+   
+    height: 30px;
+    margin-right: 22px;
+}
+
+.forum{
+    display: flex;
+    padding: 20px;
+    background-color: rgb(205, 247, 238);
+}
+
+
+
+.forumid{
+    display: flex;
+    background-color: rgb(205, 247, 238);
+padding: 20px;
+}
+
+
+
+.user{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   margin-right: 50px;
+}
+
+
+img{
+    width: 150px;
+    
+}
+
+p{
+    outline: 2px solid rgb(148, 223, 219);
+    width: 550px;
+    height: 150px;
+}
+
+.poutput{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.delete{
+    height: 30px;
+    /* margin-left: 500px; */
+}
+
+.btn{
+    display: flex;
+}
+
+.-none{
+    display: none;
+  }
+
+.newmesboard{
+    outline: 2px solid rgb(148, 223, 219);
+    width: 550px;
+    height: 150px;
+}

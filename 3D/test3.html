@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<title>如何匯入sketchp的物件到three.js</title>
+	<style>
+		canvas {
+			width: 100%;
+			height: 100%
+		}
+
+		h1 {
+			/* background: url(logo.png) no-repeat; */
+			height: 80px;
+			width: 560px
+		}
+
+		body {
+			/* background: url(bg.png) no-repeat left 80%; */
+			margin: 0 50px
+		}
+	</style>
+</head>
+
+<body>
+	<script src="build/three.js"></script>
+	<script type="module" src="examples/jsm/controls/TrackballControls.js"></script>
+	<script type="text/javascript" src="ColladaLoader.js"></script>
+	<script type="module">
+
+		import { TrackballControls } from 'examples/jsm/controls/TrackballControls.js';
+
+
+		var scene = new THREE.Scene();
+		var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+		var renderer = new THREE.WebGLRenderer();
+		var dae;
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+
+		var light;
+		function initLight() {
+			light = new THREE.DirectionalLight(0xFFFFCC, 1.0, 0);
+			light.castShadow = true;
+			light.position.set(50, 100, 200);
+			scene.add(light);
+		}
+
+		var controls;
+		controls = new THREE.TrackballControls(camera);
+		controls.rotateSpeed = 1.0;
+		controls.zoomSpeed = 1.0;
+		controls.panSpeed = 0.8;
+		controls.noZoom = false;
+		controls.noPan = false;
+		controls.staticMoving = false;
+		controls.dynamicDampingFactor = 0.3;
+		controls.keys = [65, 83, 68];
+
+		var loader = new THREE.ColladaLoader();
+		loader.load('vase.dae', function (result) {
+			dae = result.scene;
+			scene.add(result.scene);
+			dae.position.set(0, -2, 0);
+			dae.rotation.x = 0.2;
+			dae.rotation.y = 0.5;
+			dae.receiveShadow = true;
+		});
+		camera.position.z = 5;
+
+		function animate() {
+			requestAnimationFrame(animate);
+			controls.update();
+			renderer.render(scene, camera);
+		}
+		animate();
+		initLight();//打燈
+	</script>
+</body>
+
+</html>

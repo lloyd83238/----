@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello Three.js</title>
+    <div id="area"></div>
+    <!--宣告一個3D Scene在網頁內的範圍-->
+    <script src="http://threejs.org/build/three.min.js"></script><!-- 引用 three.js lib-->
+    <script src="/lib/js/loaders/STLLoader.js"></script>
+</head>
+
+<body>
+    <script>
+
+        var area = document.getElementById('area');//指定一個變數
+
+        var width = window.innerWidth,// 取得 視窗的寬與高
+            height = window.innerHeight;
+
+        var scene = new THREE.Scene(); //宣告場景
+
+        var renderer = new THREE.WebGLRenderer(); //宣告一個渲染器
+        renderer.setSize(width, height);
+
+        //宣告攝影機並設定位置，在此使用透視相機其原理會在後面章節講解
+        var camera = new THREE.PerspectiveCamera(45, width / height, 1, 800);
+        camera.position.set(0, 0, 5);
+
+        //宣告一個  Cube的幾何圖形
+        loader.load("vase.dae", function (collada) {
+
+        }),
+
+            scene.add(camera); //場景加載camera
+        scene.add(cube);   //場景加載 content ( 此範例是宣告一個 cube的幾何物件)
+        renderer.render(scene, camera);
+        area.appendChild(renderer.domElement);
+
+
+    </script>
+
+</body>
+
+</html>
